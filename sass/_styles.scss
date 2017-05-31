@@ -1,0 +1,396 @@
+h1, h2, h3, h4, h5, h6 {
+	color: #333;
+}
+.fa-zalo-square {
+	&::before {
+		content: "__";
+		background-image: url(imgs/zalo.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+}
+body {
+	font-size: 16px;	
+	color: #777;
+}
+
+// ------------------- global
+
+//navi bar
+#services {	
+	_bottom: 0px !important;
+	transform: translateY($navbar-height) !important;
+}
+
+.line {
+	background-color: $primary-color;
+	display: block;
+	height: 2px;
+	margin: 15px auto;
+	width: 70px;
+	position: relative;
+}
+
+.text-center {
+	text-align: center;
+}
+
+section.hp-section {
+	clear: both;
+	width: 100%;    
+}
+.section-padding {
+	padding-top: 40px;
+}
+.section-margin {
+	margin: 40px 0;
+}
+.border-bottom {
+	border-bottom: solid 1px $primary-color;
+}
+// ------------------- global
+header {
+	position: relative;
+}
+
+#navbar {	
+	background-color: transparent;	
+	position: absolute;
+	top: 0;
+	left: 0;	
+	height: $navbar-height-mobile;
+	z-index: 1;
+	width: 100%;
+	* {
+		background-color: transparent;
+	}
+	&.nav-onTop {	
+		nav {
+			background-color: transparent;
+		}	
+		nav {
+			li:hover a {
+				color: $primary-color-light;
+			}
+		}
+	}
+	&.navbar-fixed {
+		nav {
+			background-color: rgba(255, 255, 255, 0.9);
+			@extend .z-depth-1;
+		}	
+		margin: 0 auto;	
+		nav ul li{
+			&:hover a {
+				color: $primary-color-light;				
+			}
+			a {
+				color: #313131;
+			}
+		}
+	}
+}
+
+.brand-logo {
+	display: block;
+	height: $navbar-height;
+	img {
+		vertical-align: middle;
+		height: 70%;
+	}
+}
+
+.section {
+	&-title {
+		margin-bottom: 60px;
+		h4 {
+			font-size: 25px;
+			color: #333;
+			margin: 0;
+			position: relative;
+			text-transform: uppercase;
+			padding-bottom: 10px;
+			span {
+				color: $primary-color-light;
+			}
+		}
+	}	
+}
+
+.counter, .opening_hour {
+	position: relative;
+	&::before {
+		background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+		content: "";
+		height: 100%;
+		left: 0;
+		opacity: 0.8;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: -1;
+	}
+}
+
+.timer {
+	background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
+	padding: 20px 0;	
+	.time_counter {
+		color: $primary-color-light;
+		font-size: 40px;
+		font-weight: 700;
+		margin: 0;
+		margin-bottom: 10px;
+	}
+	.counter_title {
+		color: #fff;
+		font-size: 16px;
+		font-weight: 700;
+		letter-spacing: 1px;
+		margin: 0;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+	}
+	.counter_title_top {
+		@extend .counter_title;
+	}
+
+}
+
+.single_feature {	
+	margin-top: 10px;
+	&:hover i {
+		background: #333;
+	}
+	i {
+		border-radius: 50%;
+		color: #fff;
+		background-color: $primary-color;
+		display: inline-block;
+		font-size: 24px;
+		height: 60px;
+		line-height: 62px;
+		margin: 0 auto 15px;
+		position: relative;
+		text-align: center;
+		width: 60px;
+		z-index: 3;
+		-webkit-transition: .5s;
+		transition: .5s;
+	}
+	h3 {
+		text-transform: uppercase;
+		font-size: 14px;
+	}
+	span {
+		border-bottom: 1px dashed #ccc;
+		width: 80px;
+		display: block;
+		margin-bottom: 10px;
+	}
+	p {
+		margin-bottom: 0;
+	}
+}
+
+ul.collapsible{
+	margin: 0px;
+	li {
+		.collapsible-header{
+			background-color: $primary-color;
+			color: #fff;
+			&.active {
+				background-color: $primary-color-light;
+				color: #000;
+			}
+		}
+		.collapsible-body {
+			padding: 15px;
+			p{
+				text-align: justify;
+				margin: 0;
+			}
+		}
+	}
+	
+}
+
+
+.single_offer {
+	border: 1px solid $primary-color-light;
+	-webkit-transition: all 0.2s ease 0s;
+	transition: all 0.2s ease 0s;	
+	padding: 20px;
+	&:hover {
+		border: 1px solid $primary-color;
+		box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+	}
+	.single_offer_img {
+		img {
+			max-width: 100%;
+			height: 200px;
+			width: 200px;
+		}
+	}
+	.single_offer_content {	
+		h4 {
+			margin-bottom: 0;
+			margin-top: 20px;
+			text-transform: uppercase;
+			color: $primary-color;
+		}
+		p {
+			text-align: justify;
+		}
+	}
+	
+}
+.opening_hour {	
+	padding: 60px 0;
+}
+
+.opening-content {
+	h3 {
+		color: #fff;
+		text-transform: uppercase;
+	}
+	p {
+		color: #ddd;
+	}
+	ul {
+		color: $primary-color-light;		
+	}
+}
+
+.news-item-card {
+	.card-image {
+		img {
+			height: 300px;
+		}
+	}
+}
+
+#section-address {
+	position: relative;
+	height: 300px;	
+	#imap {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 300px;
+		z-index: 0;
+	}
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background:transparent; 
+		width: 100%;
+		height:300px;
+		z-index: 2;
+	}
+}
+.contact-col {
+	font-size: 13px;
+	h5 {
+		text-transform: uppercase;
+		color: $primary-color-light;
+		font-size: 14px;
+	}
+}
+.carousel-slider {
+	position: relative;
+}
+.carousel-item {
+	img {
+		//object-fit: contain;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+	}
+	.caption {
+		width: 100vw;
+		height: 100%;
+		position: relative;
+		z-index: 1;
+		.container {			
+			h3 {
+				color: color("light-green", "base");
+				font-size: 44px;
+				text-transform: uppercase;
+				margin-bottom: 20px;
+			}
+			h5 {
+
+			}
+		}
+	}
+	.caption::before {		
+		content: '';
+		width: 100%;
+		height: 100%;
+		background-color: #000;
+		opacity: 0.6;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+}
+#make_appointment {
+	background-color: white;
+	&:hover{
+		background-color: color("light-green", "base");
+		color: #333;
+	}
+}
+
+.wow {	
+	opacity: 1 !important;
+}
+.contact-col {
+	ul li {
+		color: #fff;
+	}
+}
+footer {
+	background-color: $primary-color;
+	.copyright-text {
+		color: $primary-color-light;
+	}
+}
+
+//-----------------------
+@media #{$medium-and-down} {
+	.timer {
+		margin-bottom: 20px;
+	}
+	.fadeInDown {	
+		animation: fadeInDown .5s linear;		
+	}
+}
+//-----------------------
+
+@media #{$medium-and-up} {
+	#navbar {
+		height: $navbar-height;
+	}
+
+	.fiddle {	
+		opacity: 0;
+	}
+	.zoomIn {		
+		animation: zoomIn .8s linear;
+	}
+	.fadeInLeft {		
+		animation: fadeInLeft .5s linear;
+	}
+	.fadeInRight {		
+		animation: fadeInRight .5s linear;
+	}
+}
